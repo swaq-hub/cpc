@@ -1,0 +1,408 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Car Registeration</title>
+  <!-- Bootstrap core CSS-->
+  <link href='{% static "css/bootstrap.min.css" %}' rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href='{% static "css/font-awesome.min.css" %}' rel="stylesheet" type="text/css">
+  <!-- Custom styles for this template-->
+  <link href='{% static "css/sb-admin.css" %}' rel="stylesheet">
+</head>
+
+<body class="bg-dark">
+  <div class="container">
+    <div class="card card-register mx-auto mt-5">
+      <div class="card-header">Car Registeration</div>
+      <div class="card-body">
+        <form action="register_car" method="post" action="testcar">
+            {% csrf_token %}
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="exampleInputName">License Plate Number</label>
+                <input class="form-control" type="text" placeholder="Enter License Plate Number" name="license_no" id="license_no">
+              </div>
+              <div class="col-md-6">
+                <label for="exampleInputLastName">Car Color</label>
+                <select name="car_color" id="car_color" class="form-control">
+                  <option value="">--Select Car Color--</option>
+                  <option value="Absolute Zero">Absolute Zero</option>
+                  <option value="Acid green">Acid green</option>
+                  <option value="Aero">Aero</option>
+                  <option value="Aero blue">Aero blue</option>
+                  <option value="Air superiority blue">Air superiority blue</option>
+                  <option value="Alabaster">Alabaster</option>
+                  <option value="Alice blue">Alice blue</option>
+                  <option value="Alien Armpit">Alien Armpit</option>
+                  <option value="Almond">Almond</option>
+                  <option value="Amazon">Amazon</option>
+                  <option value="Amber">Amber</option>
+                  <option value="Amethyst">Amethyst</option>
+                  <option value="Antique brass">Antique brass</option>
+                  <option value="Antique bronze">Antique bronze</option>
+                  <option value="Antique fuchsia">Antique fuchsia</option>
+                  <option value="Antique ruby">Antique ruby</option>
+                  <option value="Antique white">Antique white</option>
+                  <option value="Ao (English)">Ao (English)</option>
+                  <option value="Apple green">Apple green</option>
+                  <option value="Apricot">Apricot</option>
+                  <option value="Aqua">Aqua</option>
+                  <option value="Aquamarine">Aquamarine</option>
+                  <option value="Arctic lime">Arctic lime</option>
+                  <option value="Army green">Army green</option>
+                  <option value="Artichoke">Artichoke</option>
+                  <option value="Arylide yellow">Arylide yellow</option>
+                  <option value="Ash gray">Ash gray</option>
+                  <option value="Asparagus">Asparagus</option>
+                  <option value="Atomic tangerine">Atomic tangerine</option>
+                  <option value="Auburn">Auburn</option>
+                  <option value="Aureolin">Aureolin</option>
+                  <option value="AuroMetalSaurus">AuroMetalSaurus</option>
+                  <option value="Avocado">Avocado</option>
+                  <option value="Azure">Azure</option>
+                  <option value="Azure (X11/web color)">Azure (X11/web color)</option>
+                  <option value="Baby blue">Baby blue</option>
+                  <option value="Baby blue eyes">Baby blue eyes</option>
+                  <option value="Baby pink">Baby pink</option>
+                  <option value="Baby powder">Baby powder</option>
+                  <option value="Baker-Miller pink">Baker-Miller pink</option>
+                  <option value="Banana Mania">Banana Mania</option>
+                  <option value="Barbie Pink">Barbie Pink</option>
+                  <option value="Barn red">Barn red</option>
+                  <option value="Battleship grey">Battleship grey</option>
+                  <option value="Beau blue">Beau blue</option>
+                  <option value="Beaver">Beaver</option>
+                  <option value="Beige">Beige</option>
+                  <option value="B'dazzled blue">B'dazzled blue</option>
+                  <option value="Big dip o’ruby">Big dip o’ruby</option>
+                  <option value="Big Foot Feet">Big Foot Feet</option>
+                  <option value="Bisque">Bisque</option>
+                  <option value="Bistre">Bistre</option>
+                  <option value="Bistre brown">Bistre brown</option>
+                  <option value="Bitter lemon">Bitter lemon</option>
+                  <option value="Bitter lime">Bitter lime</option>
+                  <option value="Bittersweet">Bittersweet</option>
+                  <option value="Bittersweet shimmer">Bittersweet shimmer</option>
+                  <option value="Black">Black</option>
+                  <option value="Black bean">Black bean</option>
+                  <option value="Black chocolate">Black chocolate</option>
+                  <option value="Black coffee">Black coffee</option>
+                  <option value="Black coral">Black coral</option>
+                  <option value="Black olive">Black olive</option>
+                  <option value="Black Shadows">Black Shadows</option>
+                  <option value="Blanched almond">Blanched almond</option>
+                  <option value="Blast-off bronze">Blast-off bronze</option>
+                  <option value="Bleu de France">Bleu de France</option>
+                  <option value="Blizzard blue">Blizzard blue</option>
+                  <option value="Blond">Blond</option>
+                  <option value="Blood red">Blood red</option>
+                  <option value="Blue">Blue</option>
+                  <option value="Blue (Crayola)">Blue (Crayola)</option>
+                  <option value="Blue (Munsell)">Blue (Munsell)</option>
+                  <option value="Blue (NCS)">Blue (NCS)</option>
+                  <option value="Blue (Pantone)">Blue (Pantone)</option>
+                  <option value="Blue (pigment)">Blue (pigment)</option>
+                  <option value="Blue (RYB)">Blue (RYB)</option>
+                  <option value="Blue bell">Blue bell</option>
+                  <option value="Blue-gray">Blue-gray</option>
+                  <option value="Blue-green">Blue-green</option>
+                  <option value="Blue-green (color wheel)">Blue-green (color wheel)</option>
+                  <option value="Blue jeans">Blue jeans</option>
+                  <option value="Blue sapphire">Blue sapphire</option>
+                  <option value="Blue-violet">Blue-violet</option>
+                  <option value="Blue-violet (Crayola)">Blue-violet (Crayola)</option>
+                  <option value="Blue-violet (color wheel)">Blue-violet (color wheel)</option>
+                  <option value="Blue yonder">Blue yonder</option>
+                  <option value="Bluetiful">Bluetiful</option>
+                  <option value="Blush">Blush</option>
+                  <option value="Bole">Bole</option>
+                  <option value="Bondi blue">Bondi blue</option>
+                  <option value="Bone">Bone</option>
+                  <option value="Bottle green">Bottle green</option>
+                  <option value="Brandy">Brandy</option>
+                  <option value="Brick red">Brick red</option>
+                  <option value="Bright green">Bright green</option>
+                  <option value="Bright lilac">Bright lilac</option>
+                  <option value="Bright maroon">Bright maroon</option>
+                  <option value="Bright navy blue">Bright navy blue</option>
+                  <option value="Bright yellow (Crayola)">Bright yellow (Crayola)</option>
+                  <option value="Brilliant rose">Brilliant rose</option>
+                  <option value="Brink pink">Brink pink</option>
+                  <option value="British racing green">British racing green</option>
+                  <option value="Bronze">Bronze</option>
+                  <option value="Brown">Brown</option>
+                  <option value="Brown sugar"></option>
+                  <option value="Brunswick green">Brunswick green</option>
+                  <option value="Bud green">Bud green</option>
+                  <option value="Buff">Buff</option>
+                  <option value="Burgundy">Burgundy</option>
+                  <option value="Burlywood">Burlywood</option>
+                  <option value="Burnished brown">Burnished brown</option>
+                  <option value="Burnt orange">Burnt orange</option>
+                  <option value="Burnt sienna">Burnt sienna</option>
+                  <option value="Burnt umber">Burnt umber</option>
+                  <option value="Byzantine">Byzantine</option>
+                  <option value="Byzantium">Byzantium</option>
+                  <option value="Cadet">Cadet</option>
+                  <option value="Cadet blue">Cadet blue</option>
+                  <option value="Cadet blue (Crayola)">Cadet blue (Crayola)</option>
+                  <option value="Cadet grey">Cadet grey</option>
+                  <option value="Cadmium green">Cadmium green</option>
+                  <option value="Cadmium orange">Cadmium orange</option>
+                  <option value="Cadmium red">Cadmium red</option>
+                  <option value="Cadmium yellow">Cadmium yellow</option>
+                  <option value="Café au lait">Café au lait</option>
+                  <option value="Café noir">Café noir</option>
+                  <option value="Cambridge blue">Cambridge blue</option>
+                  <option value="Camel">Camel</option>
+                  <option value="Cameo pink">Cameo pink</option>
+                  <option value="Canary">Canary</option>
+                  <option value="Canary yellow">Canary yellow</option>
+                  <option value="Candy apple red">Candy apple red</option>
+                  <option value="Candy pink">Candy pink</option>
+                  <option value="Capri">Capri</option>
+                  <option value="Caput mortuum">Caput mortuum</option>
+                  <option value="Cardinal">Cardinal</option>
+                  <option value="Caribbean green">Caribbean green</option>
+                  <option value="Carmine">Carmine</option>
+                  <option value="Carmine (M&P)">Carmine (M&P)</option>
+                  <option value="Carnation pink">Carnation pink</option>
+                  <option value="Carnelian">Carnelian</option>
+                  <option value="Carolina blue">Carolina blue</option>
+                  <option value="Carrot orange">Carrot orange</option>
+                  <option value="Castleton green">Castleton green</option>
+                  <option value="Catawba">Catawba</option>
+                  <option value="Cedar Chest">Cedar Chest</option>
+                  <option value="Celadon">Celadon</option>
+                  <option value="Celadon blue">Celadon blue</option>
+                  <option value="Celadon green">Celadon green</option>
+                  <option value="Celeste">Celeste</option>
+                  <option value="Celtic blue">Celtic blue</option>
+                  <option value="Cerise">Cerise</option>
+                  <option value="Cerulean">Cerulean</option>
+                  <option value="Cerulean blue">Cerulean blue</option>
+                  <option value="Cerulean frost">Cerulean frost</option>
+                  <option value="Cerulean (Crayola)">Cerulean (Crayola)</option>
+                  <option value="CG blue">CG blue</option>
+                  <option value="CG red">CG red</option>
+                  <option value="Champagne">Champagne</option>
+                  <option value="Champagne pink">Champagne pink</option>
+                  <option value="Charcoal">Charcoal</option>
+                  <option value="Charm pink">Charm pink</option>
+                  <option value="Chartreuse (traditional)">Chartreuse (traditional)</option>
+                  <option value="Chartreuse (web)">Chartreuse (web)</option>
+                  <option value="Cherry blossom pink">Cherry blossom pink</option>
+                  <option value="Chestnut">Chestnut</option>
+                  <option value="China pink">China pink</option>
+                  <option value="China rose">China rose</option>
+                  <option value="Chinese red">Chinese red</option>
+                  <option value="Chinese violet">Chinese violet</option>
+                  <option value="Chinese yellow">Chinese yellow</option>
+                  <option value="Chocolate (traditional)">Chocolate (traditional)</option>
+                  <option value="Chocolate (web)">Chocolate (web)</option>
+                  <option value="Chrome yellow">Chrome yellow</option>
+                  <option value="Cinnabar">Cinnabar</option>
+                  <option value="Cinnamon Satin">Cinnamon Satin</option>
+                  <option value="Citrine">Citrine</option>
+                  <option value="Citron">Citron</option>
+                  <option value="Claret">Claret</option>
+                  <option value="Cobalt blue">Cobalt blue</option>
+                  <option value="Cocoa brown">Cocoa brown</option>
+                  <option value="Coffee">Coffee</option>
+                  <option value="Columbia Blue">Columbia Blue</option>
+                  <option value="Congo pink">Congo pink</option>
+                  <option value="Cool grey">Cool grey</option>
+                  <option value="Copper">Copper</option>
+                  <option value="Copper (Crayola)">Copper (Crayola)</option>
+                  <option value="Copper penny">Copper penny</option>
+                  <option value="Copper red">Copper red</option>
+                  <option value="Copper rose">Copper rose</option>
+                  <option value="Coquelicot">Coquelicot</option>
+                  <option value="Coral">Coral</option>
+                  <option value="Coral pink">Coral pink</option>
+                  <option value="Cordovan">Cordovan</option>
+                  <option value="Corn">Corn</option>
+                  <option value="Cornflower blue">Cornflower blue</option>
+                  <option value="Cornsilk">Cornsilk</option>
+                  <option value="Cosmic cobalt">Cosmic cobalt</option>
+                  <option value="Cosmic latte">Cosmic latte</option>
+                  <option value="Cosmos pink">Cosmos pink</option>
+                  <option value="Coyote brown">Coyote brown</option>
+                  <option value="Cotton candy">Cotton candy</option>
+                  <option value="Cream">Cream</option>
+                  <option value="Crimson">Crimson</option>
+                  <option value="Crimson (UA)">Crimson (UA)</option>
+                  <option value="Cultured">Cultured</option>
+                  <option value="Cyan">Cyan</option>
+                  <option value="Cyan (process)">Cyan (process)</option>
+                  <option value="Cyber grape">Cyber grape</option>
+                  <option value="Cyber yellow">Cyber yellow</option>
+                  <option value="Cyclamen">Cyclamen</option>
+                  <option value="Dark blue-gray">Dark blue-gray</option>
+                  <option value="Dark brown">Dark brown</option>
+                  <option value="Dark byzantium">Dark byzantium</option>
+                  <option value="Dark cornflower blue">Dark cornflower blue</option>
+                  <option value="Dark cyan">Dark cyan</option>
+                  <option value="Dark electric blue">Dark electric blue</option>
+                  <option value="Dark goldenrod">Dark goldenrod</option>
+                  <option value="Dark green">Dark green</option>
+                  <option value="Dark green (X11)">Dark green (X11)</option>
+                  <option value="Dark jungle green">Dark jungle green</option>
+                  <option value="Dark khaki">Dark khaki</option>
+                  <option value="Dark lava">Dark lava</option>
+                  <option value="Dark liver">Dark liver</option>
+                  <option value="Dark liver (horses)">Dark liver (horses)</option>
+                  <option value="Dark magenta">Dark magenta</option>
+                  <option value="Dark moss green">Dark moss green</option>
+                  <option value="Dark olive green">Dark olive green</option>
+                  <option value="Dark orange">Dark orange</option>
+                  <option value="Dark orchid">Dark orchid</option>
+                  <option value="Dark pastel green">Dark pastel green</option>
+                  <option value="Dark purple">Dark purple</option>
+                  <option value="Dark red">Dark red</option>
+                  <option value="Dark salmon">Dark salmon</option>
+                  <option value="Dark sea green">Dark sea green</option>
+                  <option value="Dark sienna">Dark sienna</option>
+                  <option value="Dark sky blue">Dark sky blue</option>
+                  <option value="Dark slate blue">Dark slate blue</option>
+                  <option value="Dark slate gray">Dark slate gray</option>
+                  <option value="Dark spring green">Dark spring green</option>
+                  <option value="Dark turquoise">Dark turquoise</option>
+                  <option value="Dark violet">Dark violet</option>
+                  <option value="Dartmouth green">Dartmouth green</option>
+                  <option value="Davy's grey">Davy's grey</option>
+                  <option value="Deep cerise">Deep cerise</option>
+                  <option value="Deep champagne">Deep champagne</option>
+                  <option value="Deep chestnut">Deep chestnut</option>
+                  <option value="Deep jungle green">Deep jungle green</option>
+                  <option value="Deep pink">Deep pink</option>
+                  <option value="Deep saffron">Deep saffron</option>
+                  <option value="Deep sky blue">Deep sky blue</option>
+                  <option value="Deep Space Sparkle">Deep Space Sparkle</option>
+                  <option value="Deep taupe">Deep taupe</option>
+                  <option value="Denim">Denim</option>
+                  <option value="Denim blue">Denim blue</option>
+                  <option value="Desert">Desert</option>
+                  <option value="Desert sand">Desert sand</option>
+                  <option value="Dim gray">Dim gray</option>
+                  <option value="Dingy Dungeon">Dingy Dungeon</option>
+                  <option value="Dodger blue">Dodger blue</option>
+                  <option value="Dogwood rose">Dogwood rose</option>
+                  <option value="Drab">Drab</option>
+                  <option value="Duke blue">Duke blue</option>
+                  <option value="Dutch white">Dutch white</option>
+                  <option value="Earth yellow">Earth yellow</option>
+                  <option value="Ebony">Ebony</option>
+                  <option value="Ecru">Ecru</option>
+                  <option value="Eerie black">Eerie black</option>
+                  <option value="Eggplant">Eggplant</option>
+                  <option value="Eggshell">Eggshell</option>
+                  <option value="Egyptian blue">Egyptian blue</option>
+                  <option value="Electric blue">Electric blue</option>
+                  <option value="Electric green">Electric green</option>
+                  <option value="Electric indigo">Electric indigo</option>
+                  <option value="Electric lime">Electric lime</option>
+                  <option value="Electric purple">Electric purple</option>
+                  <option value="Electric violet">Electric violet</option>
+                  <option value="Emerald">Emerald</option>
+                  <option value="Eminence">Eminence</option>
+                  <option value="English green">English green</option>
+                  <option value="English lavender">English lavender</option>
+                  <option value="English red">English red</option>
+                  <option value="English vermillion">English vermillion</option>
+                  <option value="English violet">English violet</option>
+                  <option value="Erin">Erin</option>
+                  <option value="Eton blue">Eton blue</option>
+                  <option value="Fallow">Fallow</option>
+                  <option value="Falu red">Falu red</option>
+                  <option value="Fandango">Fandango</option>
+                  <option value="Fandango pink">Fandango pink</option>
+                  <option value="Fashion fuchsia">Fashion fuchsia</option>
+                  <option value="Fawn">Fawn</option>
+                  <option value="Feldgrau">Feldgrau</option>
+                  <option value="Fern green">Fern green</option>
+                  <option value="Field drab">Field drab</option>
+                  <option value="Fiery rose">Fiery rose</option>
+                  <option value="Firebrick">Firebrick</option>
+                  <option value="Fire engine red">Fire engine red</option>
+                  <option value="Fire opal">Fire opal</option>
+                  <option value="Flame">Flame</option>
+                  <option value="Flax">Flax</option>
+                  <option value="Flickr Blue">Flickr Blue</option>
+                  <option value="Flickr Pink">Flickr Pink</option>
+                  <option value="Flirt">Flirt</option>
+                  <option value="Floral white">Floral white</option>
+                  <option value="Fluorescent blue">Fluorescent blue</option>
+                  <option value="Forest green (Crayola)">Forest green (Crayola)</option>
+                  <option value="Forest green (traditional)">Forest green (traditional)</option>
+                  <option value="Forest green (web)">Forest green (web)</option>
+                  <option value="French beige">French beige</option>
+                  <option value="French bistre">French bistre</option>
+                  <option value="French blue">French blue</option>
+                  <option value="French fuchsia">French fuchsia</option>
+                  <option value="French lilac">French lilac</option>
+                  <option value="French lime">French lime</option>
+                  <option value="French mauve">French mauve</option>
+                  <option value="French pink">French pink</option>
+                  <option value="French raspberry">French raspberry</option>
+                  <option value="French rose">French rose</option>
+                  <option value="French sky blue">French sky blue</option>
+                  <option value="French violet">French violet</option>
+                  <option value="Frostbite">Frostbite</option>
+                  <option value="Fuchsia">Fuchsia</option>
+                  <option value="Fuchsia (Crayola)">Fuchsia (Crayola)</option>
+                  <option value="Fuchsia purple">Fuchsia purple</option>
+                  <option value="Fuchsia rose">Fuchsia rose</option>
+                  <option value="Fulvous">Fulvous</option>
+                  <option value="Fuzzy Wuzzy">Fuzzy Wuzzy</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label style=" cursor: pointer;">Upload Car Image</label>
+            <input class="form-control" style="" type="file" accept="image/*" onchange="readURL(this)" name="car_image" id="car_image" />
+          </div>
+          <div class="text-center">
+            <img id="output" alt="car_image" src="#" />
+          </div><br>
+          <button class="btn btn-primary btn-block" type="submit">Test Car</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+          $('#output')
+            .attr('src', e.target.result)
+            .width(200)
+            .height(150);
+        };
+        reader.readAsDataURL(input.files[0]);
+        
+        
+
+
+      }
+    }
+  </script>
+  <!-- Bootstrap core JavaScript-->
+  <script src='{% static "js/jquery.min.js" %}'></script>
+  <script src='{ % static "js/bootstrap.bundle.min.js" %}'></script>
+  <!-- Core plugin JavaScript-->
+  <script src='{% static "js/jquery.easing.min.js" %}'></script>
+</body>
+
+</html>
