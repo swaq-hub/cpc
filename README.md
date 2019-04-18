@@ -1,7 +1,2 @@
-# sms
-School Management Solution
+# Car Plate Checker
 
-
-#TO-DO
-Login UI
-Theme Features, Dark, Light, Blur
